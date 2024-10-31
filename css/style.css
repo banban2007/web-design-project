@@ -1,0 +1,2564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style-type:none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border:none;
+    outline: none;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top:6rem ;
+    font-size: 90.5%;
+   
+}
+
+body{
+    background-color: #faf7f6;
+}
+
+::selection{
+    background-color:#642b73;
+    color:#facc22;
+}
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    border-radius:2px;
+}
+
+::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+header{
+   position:fixed;
+   top:0;
+   left:0;
+   right: 0;
+   background: #fff;
+   padding:1rem 5%;
+   align-items: center;
+   display: flex;
+   justify-content:space-between;
+   z-index: 10000;
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+     
+}
+
+header .logo a img{
+    width:100%;
+    height: 11vh;
+    position: relative;
+    left:-60px;
+    cursor:pointer;
+    margin:7px 0;
+}
+
+header .navbar{
+   font-size: 1rem;
+}
+
+
+header .navbar ul{
+    display:flex;
+    gap:5rem;
+
+}
+
+header .search-form{
+    height: 2rem;
+    width: 15rem;
+    border-radius: .5rem;
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    border: 0.1rem solid #fccd2a;
+}
+
+header .search-form i{
+    position: relative;
+    right:10px;
+}
+
+header .search-form input{
+    height: 100%;
+    width: 100%;
+    padding: 0 1.1rem;
+    font-size:15px;
+    color: #000;
+    text-transform: none;
+    background: transparent;
+}
+
+header .search-form input::placeholder{
+    color: #000;
+}
+
+header .search-form label{
+    font-size:20px;
+    padding-right: 1.7rem;
+    cursor: pointer;
+    color: #fccd2a;
+}
+
+header .search-form label:hover{
+    color: #fccd2a;
+}
+
+header .navbar ul li a{
+    transition: 0.3s;
+    cursor:pointer;
+    color:black;
+}
+
+header .navbar ul li a:hover{
+    color:#facc22;
+   
+}
+header .navbar ul li a::after{
+ content: '';
+  width:0;
+  height:2px;
+  background:#facc22;
+  transition: 0.2s linear;
+  display:block;
+
+}
+header .navbar ul li a:hover::after{
+    width:100%;
+    
+}
+
+header .icons{
+    display: flex;
+    gap:1rem;
+    margin-right: -3rem;
+    font-size: 1.1rem;
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    margin-left: -3rem;
+    font-size: 3rem;
+    color:#000;
+    cursor: pointer;
+    display: none;
+}
+
+/* home page css */
+
+
+.home-container .box{ 
+    width:100%;
+    display:flex;
+    height: 100vh;
+    background-image:url(../img/foodsbg.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    
+}
+
+.home-container .box .text{
+    color:white;
+    position: relative;
+    top:40%;
+    bottom:50px;
+    width:650px;
+    margin: 0px 100px;
+    animation: fadeLeft .4s linear .3s backwards;
+}
+
+@-webkit-keyframes fadeLeft {
+    0% {
+        -webkit-transform: translateX(-5rem);
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+}
+@keyframes fadeLeft {
+    0% {
+        -webkit-transform: translateX(-5rem);
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+}
+
+.home-container .box .text h2{
+    color:#FCCD2A;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 70px;
+    margin-bottom: 40px;
+
+}
+
+.home-container .box .text h2 span{
+    color:rgba(255, 255, 255, 0.786);
+    font-size: 40px;
+    font-weight: 500;
+    font-family:cursive;
+
+}
+
+.home-container .box .text p{
+    font-size: 15px;
+    font-weight:100;
+    margin-bottom: 40px;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+.home-container .box .text .btn{
+    color:white;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding:10px 20px;
+    border-radius: 8px;
+    transition:0.5s;
+    position: relative;
+}
+
+.home-container .box .text .btn:hover{
+    background:linear-gradient(295deg,#c6426e,#fccd2a,#642b73);
+    letter-spacing: 2px;
+}
+
+
+
+.home-box{
+    max-width:100%;
+    display:flex;
+    padding:20px;
+    gap:10rem;
+    margin-left: 20px;
+    justify-content: center;
+    padding-bottom:180px;
+}
+
+.home-box .home-card{
+    width:220px;
+    height:170px;
+    padding:3px;
+
+}
+
+
+.home-box .home-card .image{
+    height: 170px;
+    width:270px;
+    overflow: hidden;
+
+}
+
+
+
+.home-box .home-card .image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-box .home-card .home-info{
+    margin-top: 5px;
+}
+
+.home-box .home-card .home-info h3{
+    font-size:20px ;
+}
+
+.home-box .home-card .home-info p{
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.home-box .btn{
+    color:white;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    text-transform: uppercase;
+    font-weight:300;
+    letter-spacing: 1px;
+    padding:5px 5px;
+    transition:0.3s;
+    font-size: 14px;
+    transition: 0.5s;
+    position: relative;
+
+}
+
+.home-box .btn:hover{
+    background:linear-gradient(295deg,#c6426e,#fccd2a,#642b73);
+    letter-spacing: 2px;
+}
+
+/* banner */
+
+.pizza-banner{
+    width:100%;
+    height:50vh;
+    margin: 15px 0;
+    background-image: url(../img/pizz-banner.png);
+    background-position:center;
+    background-size: cover;
+}
+
+.pizza-banner h1{
+    font-family: P22Grenville;
+    color:#fccd2a;
+    position: relative;
+    letter-spacing: 2px;
+    padding:2rem 0.1rem 0.1rem 10rem;
+    font-size: 60px;
+    top:50px;
+}
+
+.pizza-banner .banner-title{
+    color:#fff;
+    padding-left: 20rem;
+    padding-top: 60px;
+}
+
+.pizza-banner .banner-title h2{
+    font-size: 30px;
+    margin-right: 25px;
+    font-family: Norwester;
+    color: #fff;
+    position: relative;
+    top:5px;
+}
+
+.pizza-banner .banner-title h2 span{
+    margin-left: 45px;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+    font-family: Norwester;
+}
+
+.pizza-banner .banner-btn{
+    color:#fff;
+    margin-left:17rem;
+    position: relative;
+    top:25px;
+    border:2px solid #9ca8b5;
+    transition:0.5s;
+    padding: 5px 10px;
+    z-index: 5;
+}
+
+.pizza-banner .banner-btn:hover{
+    color:#000;
+}
+
+.pizza-banner .banner-btn i{
+    margin-right: 8px;
+}
+
+.pizza-banner .banner-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.pizza-banner .banner-btn:hover::before{
+    top:unset;
+    bottom:0;
+    width:100%;
+}
+
+/* banner end */
+
+.offer-container{
+    width: 100%;
+    height:auto;
+}
+
+.offer-container .offer-box{
+    display: grid;
+    width:95%;
+    margin:0 auto ;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap:0 15px;
+}
+
+.offer-container .offer-box .offer-card-1{
+    width:720px;
+    height:470px;
+}
+
+
+.offer-container .offer-box .offer-card-1 .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.offer-container .offer-box .offer-card-1 .offer-text{
+    position: relative;
+    bottom:400px;
+    color:#fff;
+    padding:0 20px;
+}
+
+.offer-container .offer-box .offer-card-1 .offer-text h2{
+    font-size: 45px;
+}
+
+.offer-container .offer-box .offer-card-1 .offer-text h1{
+    font-size: 50px;
+    font-family: QuillScript;
+    color:#facc22;
+}
+
+.offer-container .offer-box .offer-card-1 .offer-text p{
+    margin-top:15px;
+    width:250px;
+    line-height: 27px;
+}
+ 
+.offer-container .offer-box .offer-card-1 .offer-text .offer_btn{
+    color:#fff;
+    position: relative;
+    top:20px;
+    border:2px solid #9ca8b5;
+    transition:0.5s;
+    padding: 5px 10px;
+    z-index: 5;
+}
+
+.offer-container .offer-box .offer-card-1 .offer-text .offer_btn:hover{
+    color:#000;
+}
+
+.offer-container .offer-box .offer-card-1 .offer-text .offer_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.offer-container .offer-box .offer-card-1 .offer-text .offer_btn:hover::before{
+    top:unset;
+    bottom:0;
+    width:100%;
+}
+
+
+.offer-container .offer-box .offer-card-1 .offer-text .offer_btn i{
+    margin-right:8px;
+}
+
+
+.offer-container .offer-box .offer-card-2{
+    width:720px;
+    height:470px;
+}
+
+
+.offer-container .offer-box .offer-card-2 .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.offer-container .offer-box .offer-card-2 .offer-text{
+    position: relative;
+    bottom:400px;
+    color:#fff;
+    padding:0 20px;
+}
+
+.offer-container .offer-box .offer-card-2 .offer-text h2{
+    font-size: 45px;
+    position: relative;
+    bottom:10px;
+}
+
+
+.offer-container .offer-box .offer-card-2 .offer-text p{
+    margin-top:10px;
+    width:250px;
+    line-height: 27px;
+}
+ 
+.offer-container .offer-box .offer-card-2 .offer-text .offer_btn{
+    color:#fff;
+    position: relative;
+    top:20px;
+    border:2px solid #9ca8b5;
+    transition:0.5s;
+    padding: 5px 10px;
+    z-index: 5;
+}
+
+.offer-container .offer-box .offer-card-2 .offer-text .offer_btn:hover{
+    color:#000;
+}
+
+.offer-container .offer-box .offer-card-2 .offer-text .offer_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.offer-container .offer-box .offer-card-2 .offer-text .offer_btn:hover::before{
+    top:unset;
+    bottom:0;
+    width:100%;
+}
+
+
+.offer-container .offer-box .offer-card-2 .offer-text .offer_btn i{
+    margin-right:8px;
+}
+
+
+
+
+
+
+/* team */
+
+.ourteam-container .title{
+    margin-left: 40px;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 5px 0 20px;
+    text-align: center;
+    font-family: Norwester;
+}
+
+
+.ourteam-container h1 span{
+    margin-left:10px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    color:#000;
+    font-family: Norwester;
+    clip-path: polygon(0 30%, 100% 30%, 94% 53%, 100% 76%, 0 76%, 6% 55%);
+    padding:2rem;
+    position: relative;
+}
+
+
+.ourteam-container .ourteam-box1{
+    display: flex;
+    align-items: center;
+    padding:0 50px;  
+}
+
+.ourteam-container .ourteam-box1 .image{
+    height: 300px;
+    width: 410px;
+    overflow: hidden;
+}
+
+.ourteam-container .ourteam-box1 .image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ourteam-container .ourteam-box1 .info{
+    width:710px;
+    margin-left: 4rem;
+}
+.ourteam-container .ourteam-box1 .info h1{
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-family: "Gowun Batang", serif;
+ 
+}
+
+.ourteam-container .ourteam-box1 .job{
+   font-size: 20px;
+   margin-left:15px;
+   font-family: "Gowun Batang", serif;
+}
+
+
+.ourteam-container .ourteam-box1 .info p{
+    line-height: 23px;
+    font-family: "Gowun Batang", serif;
+    letter-spacing: 1px;
+}
+
+
+
+.ourteam-container .ourteam-box2{
+    margin-top:4.5rem;
+    display: flex;
+    align-items: center;
+    padding:0 50px;  
+    justify-content: space-between;
+}
+
+.ourteam-container .ourteam-box2 .info{
+    width:710px;
+    margin-left: 15rem;
+
+}
+.ourteam-container .ourteam-box2 .info h1{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Gowun Batang", serif;
+}
+
+.ourteam-container .ourteam-box2 .info p{
+    line-height: 23px;
+    font-family: "Gowun Batang", serif;
+    letter-spacing: 1px;
+}
+
+.ourteam-container .ourteam-box2 .job{
+    font-size: 20px;
+    margin-left:15px;
+    font-family: "Gowun Batang", serif;
+}
+
+
+.ourteam-container .ourteam-box2 .image{
+    height: 300px;
+    width: 410px;
+    overflow: hidden;
+}
+
+.ourteam-container .ourteam-box2 .image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  
+}
+
+.ourteam-container .ourteam-box3{
+    display: flex;
+    align-items: center;
+    padding:0 50px;  
+}
+
+.ourteam-container .ourteam-box3 .image{
+    height: 300px;
+    width: 410px;
+    overflow: hidden;
+}
+
+.ourteam-container .ourteam-box3 .image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.ourteam-container .ourteam-box3 .info{
+    width:710px;
+    margin-left: 4rem;
+}
+.ourteam-container .ourteam-box3 .info h1{
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-family: "Gowun Batang", serif;
+ 
+}
+
+.ourteam-container .ourteam-box3 .job{
+   font-size: 20px;
+   margin-left:15px;
+   font-family: "Gowun Batang", serif;
+}
+
+
+.ourteam-container .ourteam-box3 .info p{
+    line-height: 23px;
+    font-family: "Gowun Batang", serif;
+    letter-spacing: 1px;
+}
+
+
+
+.ourteam-container .ourteam-box4{
+    margin-top:4.5rem;
+    display: flex;
+    align-items: center;
+    padding:0 50px;  
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.ourteam-container .ourteam-box4 .info{
+    width:710px;
+    margin-left: 15rem;
+}
+
+.ourteam-container .ourteam-box4 .info h1{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Gowun Batang", serif;
+}
+
+.ourteam-container .ourteam-box4 .info p{
+    line-height: 23px;
+    font-family: "Gowun Batang", serif;
+    letter-spacing: 1px;
+}
+
+.ourteam-container .ourteam-box4 .job{
+    font-size: 20px;
+    margin-left:15px;
+    font-family: "Gowun Batang", serif;
+}
+
+
+.ourteam-container .ourteam-box4 .image{
+    height: 300px;
+    width: 410px;
+    overflow: hidden;
+
+
+
+}
+
+.ourteam-container .ourteam-box4 .image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  
+}
+
+
+
+
+
+
+
+/* Menu page css */
+
+
+.banner-bg{
+    width:100%;
+    height:50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../img/banner-bg.jpeg);
+    background-position:center;
+    background-size: cover;
+}
+
+.banner-bg h1{
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    position: relative;
+    top: 50%;
+    font-family: "Gowun Batang", serif;
+
+}
+
+.banner-bg h1 span{
+    margin-left:15px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    font-family: Norwester;
+    clip-path: polygon(0 30%, 100% 30%, 94% 53%, 100% 76%, 0 76%, 6% 55%);
+    padding:2rem;
+    position: relative;
+    color:#21324B;
+    font-family: "Gowun Batang", serif;
+}
+
+
+.menu-product{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap:1rem;
+    padding-top:20px;
+}
+
+.menu-product .menu-box{
+    width:450px;
+    height:460px;
+    padding: 20px;
+    margin-left: 19px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+    border-radius:5px; 
+}
+
+.menu-product .menu-box .image{
+    height:340px;
+    max-width: 465px;
+    overflow: hidden;
+    border-radius:5px;
+    margin:0 auto;
+}
+
+
+.menu-product .menu-box .image img{
+    width:100%;
+    height: 100%;
+    
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu-product .menu-box .menu-info h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: "Gowun Batang", serif;
+}
+
+
+.menu-product .menu-box .menu-btn{
+    color:#000;
+    padding:5px 10px;
+    border:2px solid #9ca8b5;
+    position: relative;
+    transition: 0.5s;
+}
+
+.menu-product .menu-box .menu-btn:hover{
+    color:#fff;
+}
+
+.menu-product .menu-box .menu-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.menu-product .menu-box .menu-btn:hover::before{
+    top:unset;
+    bottom:0;
+    width:100%;
+}
+
+.menu-product .menu-box .menu-btn i{
+    margin-right: 8px;
+}
+
+.heading{
+    margin-top:50px ;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: Norwester;
+ 
+}
+
+.heading span{
+    margin-left:15px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    color:#000;
+    font-family: Norwester;
+    clip-path: polygon(0 30%, 100% 30%, 94% 53%, 100% 76%, 0 76%, 6% 55%);
+    background-color: #21324B;
+    padding:2rem;
+    position: relative;
+}
+
+
+
+.menu{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(21rem,1fr));
+    gap:2rem;
+    padding-top:50px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-bottom:20px;
+}
+
+.menu .menu-card{
+    width:300px;
+    height:430px;
+    padding: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+    border-radius:5px; 
+}
+
+.menu .menu-card .menu-image{
+    height:255px;
+    max-width: 265px;
+    overflow: hidden;
+    border-radius:5px;
+    margin:0 auto;
+}
+
+.menu .menu-card .menu-image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s ease-in-out;
+
+}
+
+
+.menu .menu-card .menu-image:hover img{
+    transform: scale(1.1);
+}
+
+
+.menu .menu-card .menu-info h2{
+    font-family: "Sofadi One", system-ui;
+    font-weight:600;
+    font-size: 30px;
+    color:#277a84;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+
+.menu .menu-card .menu-info h3{
+    font-weight:400;
+    text-align: center;
+    padding-top:2px;
+    position: relative;
+    left:20px;
+    
+}
+
+
+.menu .menu-card .menu-info h3 sub{
+    margin-left: 5px;
+    color: #6d6a6a;
+    font-size: 13px;
+    text-decoration:line-through;
+
+}
+
+.menu .menu-card .menu-info .menu-star{
+    padding-top:5px;
+    color:gold;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.menu .menu-card .menu-info .menu-btn{
+    color:#000;
+    padding:2px 20px 2px 20px;
+    border:2px solid #9ca8b5;
+    left:50px;
+    position: relative;
+    transition: 0.5s;
+
+}
+
+.menu .menu-card .menu-info .menu-btn:hover{
+    color:#fff;
+}
+
+.menu .menu-card .menu-info .menu-btn i{
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.menu .menu-card .menu-info .menu-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.menu .menu-card .menu-info .menu-btn:hover::before{
+    top:unset;
+    bottom:0;
+    width:100%;
+}
+
+
+section .our-Box{
+    margin-top:50px;
+    width:100%;
+    display:grid;
+    gap:2rem;
+    overflow: hidden;
+}
+
+ section .our-Box image{
+    height:700px;
+    width:100rem;
+    overflow: hidden;
+ 
+}
+section  .our-Box img{
+    width: 100%;
+    height: 93%;
+}
+
+ section .ourmenubig-box{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(21rem,1fr));
+    gap:1rem;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+ section .ourmenubig-box .ourmenu-card{
+    width:300px;
+    height:430px;
+    padding: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+    border-radius:5px; 
+}
+
+ section .ourmenubig-box .ourmenu-card .ourmenu-image{
+    height:255px;
+    max-width: 265px;
+    overflow: hidden;
+    border-radius:5px;
+    margin:0 auto;
+}
+
+ section .ourmenubig-box .ourmenu-card .ourmenu-image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s ease-in-out;
+}
+
+section .ourmenubig-box .ourmenu-card .ourmenu-image img:hover{
+    transform: scale(1.1);
+}
+
+
+
+ section .ourmenubig-box .ourmenu-card .ourmenu-info h2{
+    font-family: "Sofadi One", system-ui;
+    font-weight:600;
+    font-size: 30px;
+    color:#277a84;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+section .ourmenubig-box .ourmenu-card .ourmenu-info h3{
+    font-weight:400;
+    text-align: center;
+    padding-top:2px;
+    position: relative;
+    left:20px;
+}
+
+section .ourmenubig-box .ourmenu-card .ourmenu-info h3 sub{
+    margin-left: 5px;
+    color: #6d6a6a;
+    font-size: 13px;
+    text-decoration:line-through;
+}
+
+
+section .ourmenubig-box .ourmenu-card .ourmenu-info .ourmenu-star{
+    padding-top:5px;
+    color:gold;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+ section .ourmenubig-box .ourmenu-card .ourmenu-info .ourmenu-btn{
+    color:#000;
+    padding:2px 20px 2px 20px;
+    border:2px solid #9ca8b5;
+    left:50px;
+    position: relative;
+    transition: 0.5s;
+}
+
+section .ourmenubig-box .ourmenu-card .ourmenu-info .ourmenu-btn i{
+    margin-right: 8px;
+}
+ section .ourmenubig-box .ourmenu-card .ourmenu-info .ourmenu-btn:hover{
+    color:#fff;
+}
+
+section .ourmenubig-box .ourmenu-card .ourmenu-info .ourmenu-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    transition:0.5s;
+    z-index: -1;
+
+}
+
+section .ourmenubig-box .ourmenu-card .ourmenu-info .ourmenu-btn:hover::before{
+    top:unset;
+    width: 100%;
+    bottom:0;
+}
+
+/* drinks start */
+.drinks-products{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:2rem 3rem;
+    border-radius: 50px;
+    margin-top: 50px;
+
+}
+
+.drinks-products .drinks-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap:1rem;
+    padding-top:15px;
+}
+
+
+.drinks-products .drinks-box .drinks-card{
+    padding:3rem 2rem;
+    text-align: center;
+    outline: .1rem solid #facc22;
+    border-radius: 10px;
+    max-width:300px;
+    height: 380px;
+ 
+}
+.drinks-products .drinks-box .drinks-card .image{
+    height:210px;
+    max-width: 200px;
+    overflow: hidden;
+    border-radius:5px;
+    margin:0 auto;
+}
+
+.drinks-products .drinks-box .drinks-card .image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s ease-in-out;
+
+}
+
+.drinks-products .drinks-box .drinks-card .image:hover img{
+    transform:translateY(-10px);
+}
+
+
+.drinks-products .drinks-box .drinks-card .drinks-info h4{
+    text-align: center;
+    font-weight: 350;
+    color:#000;
+}
+
+.drinks-products .drinks-box .drinks-card .drinks-star{
+    text-align: center;
+    color:gold;
+}
+
+.drinks-products .drinks-box .drinks-card .drinks-btn{
+    color:#000;
+    position: relative;
+    margin-left: 5px;
+    top:10px;
+    border:2px solid #9ca8b5;
+    transition:0.5s;
+    padding: 2px 13px;
+    z-index: 5;
+}
+
+.drinks-products .drinks-box .drinks-card .drinks-btn i{
+    margin-right: 7px;
+}
+
+
+.drinks-products .drinks-box .drinks-card .drinks-btn:hover{
+   color:#fff;
+}
+
+.drinks-products .drinks-box .drinks-card .drinks-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.drinks-products .drinks-box .drinks-card .drinks-btn:hover::before{
+    top:unset;
+    bottom:0;
+    width:100%;
+}
+
+/* coffee start */
+
+.drinks-products2{
+    max-width: 1400px;
+    margin:0 auto;
+    padding:2rem 3rem;
+    margin-top: 25px;
+
+}
+
+.drinks-products2 .drinks-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+    padding-top:15px;
+    gap:1rem;
+}
+
+.drinks-products2 .drinks-box .drinks-card{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    backdrop-filter: blur(15px);
+    padding-bottom: 100px;
+    margin-bottom: 20px;
+}
+
+.drinks-products2 .drinks-box .drinks-card .image{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding:20px;
+    transition: 0.5s ease-in-out;
+    height:290px;
+    width: 240px;
+}
+
+.drinks-products2 .drinks-box .drinks-card:hover .image{
+    transform: translateY(-80px);
+    margin-bottom: 20px;
+}
+
+.drinks-products2 .drinks-box .drinks-card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin:20px;
+    transition:  0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.drinks-products2 .drinks-box .drinks-card:hover .image img{
+    transform: translate();
+    margin-bottom: 0;
+}
+
+.drinks-products2 .drinks-box .drinks-card h3{
+    font-weight: 600;
+
+}
+
+.drinks-products2 .drinks-box .drinks-card .drinks-info{
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    bottom:5rem;
+}
+
+.drinks-products2 .drinks-box .drinks-card:hover .drinks-info{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-30px);
+}
+
+
+.drinks-products2 .drinks-box .drinks-card .drinks-info h4{
+    font-weight: 400;
+}
+
+.drinks-products2 .drinks-box .drinks-card .drinks-info .drinks-star i{
+    color:gold;
+    padding-top:10px;
+    padding-bottom: 15px;
+}
+
+.drinks-products2 .drinks-box .drinks-card .drinks-info .drinks-btn{
+    color:white;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition:0.5s;
+    justify-content: center;
+    padding:2px 20px;
+    font-size:15px;
+}
+
+.drinks-products2 .drinks-box .drinks-card .drinks-info .drinks-btn:hover{
+    background:linear-gradient(295deg,#c6426e,#fccd2a,#642b73);
+    letter-spacing: 2px;
+}
+
+/* Review css */
+
+.review{
+    max-width: 1600px;
+    margin:0 auto;
+    padding:2rem 3rem;
+}
+
+.review h1{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Norwester;
+}
+
+.review h1 span{
+    margin-left:15px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    color:#000;
+    font-family: Norwester;
+    clip-path: polygon(0 30%, 100% 30%, 94% 53%, 100% 76%, 0 76%, 6% 55%);
+    background-color: #21324B;
+    padding:2rem;
+    position: relative;
+}
+
+
+.review .review-box{
+    max-width:100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+    gap:5rem;
+    padding:20px;
+    margin-left: 20px;
+}
+
+.review .review-box .review-card{
+    width:280px;
+    height:410px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    position: relative;
+    border-radius: 5px;
+
+
+}
+
+.review .review-box .review-card .profile-image{
+    overflow: hidden;
+    position: relative;
+    margin-top: -20px;
+    transition: 0.5s ease-in-out;
+    padding:20px;
+    margin-left: 28px;
+    height:180px;
+    width: 180px;
+}
+
+.review .review-box .review-card .profile-image img{
+    border-radius: 50%;
+    border:4px solid #cccccc;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin:20px;
+    overflow: hidden;
+
+}
+
+.review .review-box .review-card .review-text{
+   text-align: center;
+}
+
+
+.review .review-box .review-card .review-text h2{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.review .review-box .review-card .review-text .review-star i{
+    color:gold;
+    font-size: 14px;
+ 
+}
+
+.review .review-box .review-card .review-text .review-star p{
+    font-weight: 300;
+  
+
+}
+
+/* Order */
+
+.order{
+    width: 100%;
+    padding:20px 0 ;
+}
+
+.order h1{
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: P22Grenville;
+    padding-bottom: 40px;
+    font-size: 50px;
+    color:black;
+}
+
+.order h1 span{
+    font-family: P22Grenville;
+    margin-left:15px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    color:#000;
+    clip-path: polygon(0 30%, 100% 30%, 94% 53%, 100% 76%, 0 76%, 6% 55%);
+    background-color: #21324B;
+    padding:2rem;
+    position: relative;
+}
+
+.order .order-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 15px;
+}
+
+.order .order-container .order-image img{
+    width:700px;
+}
+
+.order .order-container .order-reg{
+    width:50%;
+    height:680px;
+    background: #faf3ce;
+    padding: 15px 30px 0 20px;
+    border-radius: 10px;
+}
+
+.order .order-container .order-reg h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: P22Grenville;
+    color:#facc22;
+}
+
+.order .order-container .order-reg .order-list .order-box{
+    margin-bottom: 20px;
+    display: flex;
+    gap:3rem;
+}
+
+
+.order .order-container .order-reg .order-list .order-box .inputbox,
+.textareabox{
+    display: flex;
+    flex-direction: column;
+    gap:.3rem;
+}
+
+
+.order .order-container .order-reg .order-list .order-box .inputbox{
+    width:49%;
+}
+
+.order .order-container .order-reg .order-list .order-box .textareabox{
+    width:49%;
+}
+
+
+.order .order-container .order-reg .order-list .order-box .inputbox input,
+.textareabox textarea{
+    border:1px solid #fccd2a;
+    padding: .5rem 1rem;
+    border-radius:5px;
+}
+
+.order .order-container .order-reg .order-list .order-box .textareabox textarea{
+    height: 150px;
+    resize: none;
+}
+
+.order .order-container .order-reg .order-list .order-btn{
+    color:#000;
+    position: relative;
+    margin-left: 5px;
+    top:25px;
+    border:2px solid #9ca8b5;
+    transition:0.5s;
+    padding: 5px 10px;
+    z-index: 5;
+}
+
+.order .order-container .order-reg .order-list .order-btn:hover{
+    color:#fff;
+}
+
+
+.order .order-container .order-reg .order-list .order-btn i{
+    margin-right: 8px;
+}
+
+.order .order-container .order-reg .order-list .order-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.order .order-container .order-reg .order-list .order-btn:hover::before{
+    top:unset;
+    bottom:0;
+    width:100%;
+}
+
+/* order end */
+
+/* Login */
+
+.login_container{
+    width:100%;
+    height: 100vh;
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.login_container .login_form{
+    width: 400px;
+    height: 490px;
+    background-image: url(../img/login_card_bg.png);
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    top:60%;
+    left:50%;
+    padding:20px;
+    border:10px;
+    transform: translate(-50% , -50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.login_container .login_form h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+    font-family: P22Grenville;
+}
+
+.login_container .login_form .input_box{
+    width:330px;
+    margin: 0 auto;
+}
+
+.login_container .login_form .input_box .fied{
+    width:100%;
+    border-bottom: 1px solid #919191;
+    border-top:0;
+    border-left:0;
+    border-right: 0;
+    margin-bottom: 10px;
+    padding:10px 0;
+    background: none;
+    font-size: 15px;
+}
+
+.login_container .login_form .input_box .check_box{
+    margin:20px 0;
+    accent-color: #facc22;
+    cursor: pointer;
+}
+
+.login_container .login_form .input_box label{
+    cursor: pointer;
+}
+
+.login_container .login_form .input_box .submit_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    padding:5px 70px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.login_container .login_form .social_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px 0;
+
+}
+
+.login_container .login_form .social_icon i{
+    width: 40px;
+    height: 40px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    text-align: center;
+    border-radius: 50%;
+    margin:0 5px;
+    font-size: 20px;
+    line-height: 40px;
+    transition:0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.login_container .login_form .social_icon i:hover{
+    transform: translateY(-5px)
+}
+
+.login_container .login_form .tag p{
+    color:#000;
+    line-height: 26px;
+}
+
+.login_container .login_form .tag p a{
+   color:#facc22;
+}
+
+/* Login end */
+
+/* register start */
+
+
+.register_container{
+    width:100%;
+    height: 100vh;
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.register_container .register_form{
+    width: 400px;
+    height: 585px;
+    background-image: url(../img/login_card_bg.png);
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    top:60%;
+    left:50%;
+    padding:20px;
+    border:10px;
+    transform: translate(-50% , -50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.register_container .register_form h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+    font-family: P22Grenville;
+}
+
+.register_container .register_form .input_box{
+    width:330px;
+    margin: 0 auto;
+}
+
+.register_container .register_form .input_box .fied{
+    width:100%;
+    border-bottom: 1px solid #919191;
+    border-top:0;
+    border-left:0;
+    border-right: 0;
+    margin-bottom: 10px;
+    padding:10px 0;
+    background: none;
+    font-size: 15px;
+}
+
+.register_container .register_form .input_box .check_box{
+    margin:20px 0;
+    accent-color: #facc22;
+    cursor: pointer;
+}
+
+.register_container .register_form .input_box label{
+    cursor: pointer;
+}
+
+.register_container .register_form .input_box .submit_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    padding:5px 70px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.register_container .register_form .social_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px 0;
+
+}
+
+.register_container .register_form .social_icon i{
+    width: 40px;
+    height: 40px;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    text-align: center;
+    border-radius: 50%;
+    margin:0 5px;
+    font-size: 20px;
+    line-height: 40px;
+    transition:0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.register_container .register_form .social_icon i:hover{
+    transform: translateY(-5px)
+}
+
+.register_container .register_form .tag p{
+    color:#000;
+}
+
+.register_container .register_form .tag p a{
+   color:#facc22;
+   margin-left: 8px;
+
+}
+
+/* register end */
+
+/* about start */
+
+
+.about_container .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    padding-bottom:70px;
+    background-image: url(../img/about_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.about_container .about_main .about_image{
+    position: relative;
+    top:60px;
+}
+
+.about_container .about_main .about_image img{
+    width:750px;
+}
+
+.about_container .about_main .about_text{
+    width:600px;
+}
+
+.about_container .about_main .about_text h3{
+    font-size: 45px;
+    position: relative;
+    font-family: P22Grenville;
+}
+
+.about_container .about_main .about_text p{
+  margin-top: 20px;
+  line-height:25px;
+}
+
+.about_container .about_main .about_text .services{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 90px 0px 20px;
+}
+
+.about_container .about_main .about_text .services .btn{
+    border: 2px solid #9ca8b5;
+    padding:2px 5px 2px 5px;
+    color:#000;
+    transition: 0.5s;
+    position: relative;
+    top:10px;
+}
+
+.about_container .about_main .about_text .services .btn a{
+    color:#000;
+}
+
+.about_container .about_main .about_text .services .btn:hover{
+    color:#facc22;
+}
+
+.about_container .about_main .about_text .about_btn{
+    color:#000;
+    position: relative;
+    margin-left: 20px;
+    top:70px;
+    border:2px solid #9ca8b5;
+    transition:0.5s;
+    padding:2px 8px 2px 8px;
+    z-index: 5;
+}
+
+.about_container .about_main .about_text .about_btn:hover{
+    color:#fff;
+}
+
+.about_container .about_main .about_text .about_btn i{
+    margin-right: 8px;
+}
+
+.about_container .about_main .about_text .about_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:linear-gradient(135deg,#c6426e,#fccd2a,#642b73);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.about_container .about_main .about_text .about_btn:hover::before{
+    top:unset;
+    width: 100%;
+    bottom: 0;
+}
+
+footer{
+    width:100%;
+    padding:30px 0 0 20px; 
+    background: #eeee;      
+}
+
+footer .footer-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+ 
+} 
+
+footer .footer-main .footer-tag{
+    text-align: center;
+   
+}
+
+footer .footer-main .footer-tag p{
+    transition:0.3s ease-in-out;
+}
+
+footer .footer-main .footer-tag p:hover{
+    transform: translateX(10px);
+}
+
+footer .footer-main .footer-tag h2{
+    margin-bottom:10px;
+    font-size: 25px;
+}
+
+footer .footer-main .footer-tag a{
+color:#000;
+display: flex;
+padding-left:8.5rem;
+transition:0.3s ease-in-out;
+}
+
+footer .footer-main .footer-tag a:hover{
+        transform: translateX(10px);
+}
+
+footer .footer-main .footer-tag a i{
+    padding-right:10px;
+
+}
+
+footer .text{
+    text-align: center;
+    margin-top:20px;
+}
+
+/* Media Query သိပ်မရေးတတ်လို့ ရေးတတ်သလိုပဲရေးထားတယ်ဆရာ */
+
+
+@media (max-width:1024px){
+
+    html{
+        font-size:80%;
+    }
+    header{
+        padding:5rem;
+        height: 20px;
+
+    }
+    .home-container{
+        width: 126.5%;
+    }
+    .home-box{
+        margin-left:11rem;
+    }
+    .menu-product{
+        display:flex;
+        width: 98rem;
+    }
+    .pizza-banner{
+        width: 124.5%;
+    }
+    .review h1{
+        margin-left:23rem;
+    }
+    .review .review-box{
+        display: grid;
+        grid-template-columns: repeat(4,minmax(0,1fr));
+        gap:23rem;
+        position: relative;
+        right:35px;
+    }
+    .banner-bg h1{
+        width: 10rem;
+        font-size:30px; 
+    }
+
+    .offer-container .offer-box{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap:19rem;
+    }
+    .offer-container .offer-box .offer-card-1{
+        width:165.5%;
+    }
+    .offer-container .offer-box .offer-card-1 .offer-text{
+        padding-top: 60px;
+        
+    }
+    .offer-container .offer-box .offer-card-2{
+        width:165.5%;
+    }
+    .offer-container .offer-box .offer-card-2 .offer-text{
+        padding-top: 55px;   
+    }
+    .ourteam-container .title{
+        bottom:80px;
+        position: relative;
+        left: 12rem;
+    }
+    .ourteam-container .ourteam-box2{
+        display: flex;
+        position: relative;
+        left: 20rem;
+    }
+    .ourteam-container .ourteam-box2 .image{
+        height: 300px;
+        width: 510px;
+        overflow: hidden;
+    }
+    .ourteam-container .ourteam-box4{
+        display: flex;
+        position: relative;
+        left: 20rem;
+    }
+    .ourteam-container .ourteam-box4 .image{
+        height: 300px;
+        width: 510px;
+        overflow: hidden;
+    }
+    .order h1{
+        font-size: 35px;
+        margin-left: 20rem;
+    }
+    .order .order-container{
+        display: flex;
+        gap:2rem;
+        width: 125%;
+    }
+    .about_container .about_main{
+        width: 125.5%;
+    }
+    .banner-bg{
+        width: 125%;
+    }
+    .banner-bg h1{
+        position: relative;
+        left:45rem;
+    }
+    .menu{
+        width: 125.5%;
+        display: grid;
+        grid-template-columns:repeat(4,minmax(0,1fr)) ;
+        gap:1rem;
+    }
+     section .ourmenubig-box{
+        width: 125.5%;
+        display: grid;
+        grid-template-columns:repeat(4,minmax(0,1fr)) ;
+        gap:1rem;
+    }
+    .drinks-products .drinks-box{
+        width: 125.5%;
+        display: grid;
+        grid-template-columns:repeat(3,minmax(0,1fr)) ;
+    }
+    .drinks-products2 .drinks-box{
+        width: 125.5%;
+    }
+    .login_container{
+        width: 125.5%;
+        position: relative;
+    }
+    .register_container{
+        width: 125.5%;
+        position: relative;
+        margin:60px 0; 
+    }
+    footer{
+        width: 125.5%;
+    }
+
+}
+
+
+@media only screen and (max-width:768px){
+
+
+    header{
+        height: 100px;
+        padding:4rem;
+    }
+
+    header .logo a img{
+        height: 10vh;
+    }
+    header .search-form{
+        height: 2.5rem;
+        width: 19rem;
+    }
+
+    header .fa-bars{
+        padding: -5rem;
+        display: block;
+    }
+    header .navbar{
+        font-size: 15px;
+        position:absolute;
+        display: none;
+        top:100%;
+        left:0;
+        right:0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+       
+    }
+    header .navbar ul {
+        margin:1.5rem;
+        line-height: 40px;
+        display:block;
+        padding:1.5rem;
+        background:#fff;
+        border:.1rem solid rgba(0, 0, 0, .1);
+        clip-path:polygon(0 0, 100% 0, 100% 0, 0,0);
+    }
+    header #toggler:checked ~ .navbar{
+        display: block;
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .home-container .box{
+        width: 130%;
+    }
+    .home-box{
+        width: 154%;
+        margin-left:15rem;
+    }
+    .menu-product{
+        width: 165%;
+    }
+  
+    .banner-box .pizza-banner{
+        width: 165%;
+    }
+    .review .review-box{
+        width: 154%;
+        gap:24rem;
+        
+    }
+    
+    .offer-container .offer-box{
+        width:128%;
+        font-size: 15px;
+    }
+    .ourteam-container{
+        width: 129%;
+    }
+    .about_container{
+        width:128%;
+    }
+    .banner-bg{
+        width: 154%;
+
+    }
+    .menu{
+        width:124.5%;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        margin-left: 7rem;
+    }
+     section .ourmenubig-box{
+        width:124.5%;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        margin-left:7rem;
+    }
+    .drinks-products .drinks-box{
+        width:124.5%;
+        font-size: 15px;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        margin-left:7rem;
+    }
+    .drinks-products2 .drinks-box{
+        width:124.5%;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        margin-left:7rem;
+    }
+    .login_container{
+        width: 124.5%;
+    }
+    footer{
+        width: 154%;
+        font-size: 18px;
+    }
+
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size:65%;
+    }
+    header{
+       padding:6rem;
+    }
+    header .logo{
+        position: relative;
+        left:5rem;
+    }
+    .home-container{
+        width:100%;
+    }
+    .home-container .box{
+        width:43.5rem;
+    }
+    .home-container .box .text{
+        width:40%;
+    }
+    .home-container .box .text h2{
+        font-size: 30px;
+        position: relative;
+        bottom:10rem;
+        right: 8rem;
+        line-height: 50px;
+    }
+    .home-container .box .text h2 span{
+        font-size: 30px;
+        position: relative;
+        bottom:10px;
+    }
+    .home-container .box .text p{
+        width: 400px;
+        position: relative;
+        bottom: 13rem;
+        right: 8rem;
+    }
+    .home-container .box .text .btn{
+        position: relative;
+        bottom: 13rem;
+        right:8rem;
+    }
+    .home-box{
+        width:60%;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+    .home-box .home-card{
+        margin-bottom: 7rem;
+        margin-left: -7rem;
+    }
+    .menu-product{
+        width:100%;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+
+    }
+    .menu-product .menu-box{
+        width:100%;
+    }
+    .banner-box{
+        width:100%;
+    }
+    .banner-box .pizza-banner{
+        width:43.5rem;
+    }
+    .banner-box .pizza-banner h1{
+        position: relative;
+        top:-2rem;
+        width: 0;
+    }
+    .banner-box .pizza-banner .banner-title{
+        position: relative;
+        top:-7rem;
+        left: -3rem;
+        width:0;
+    }
+    .banner-box .pizza-banner .banner-title h2{
+        width:0%;
+    }
+    .banner-box .pizza-banner .banner-btn{
+        position: relative;
+        top:-4rem;
+        left: -3rem;
+    }
+    .review{
+        width:80%;
+    } 
+    .review h1{
+        width:100%;
+        width:3rem;
+        font-size: 25px;
+       position: relative;
+       left: -20rem;
+    }
+    .review h1 span{
+        width: 100%;
+    }
+    .review .review-box{
+        width: 100%;
+        row-gap:5rem;
+       display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        font-size:15px;
+    }
+    .offer-container{
+        width:100%;
+        height:100vh;
+    }
+    .offer-container .offer-box{
+        width:88%;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        row-gap:.1px;
+        position: relative;
+    }
+    .offer-container .offer-box .offer-card-1{
+      width:400px;
+     
+    }
+    .offer-container .offer-box .offer-card-1 .offer-text p{
+        font-size:13px; 
+        position: relative;
+        bottom: 35px;
+    }
+    .offer-container .offer-box .offer-card-1 .offer-text h2{
+        font-size:30px;
+        position: relative;
+        margin-top:10rem;
+
+    }
+    .offer-container .offer-box .offer-card-1 .offer-text h1{
+       position: relative;
+       width:0;
+       left:210px;
+       bottom: 30px;
+       font-size: 40px;
+    }
+    .offer-container .offer-box .offer-card-1 .offer-text .offer_btn{
+        position: relative;
+        top:-20px;
+        font-size: 10px;
+    }
+    .offer-container .offer-box .offer-card-1{
+        width:400px;
+       
+      }
+      .offer-container .offer-box .offer-card-2{
+        width:400px;
+        height:0;
+        position: relative;
+        bottom: 22rem;
+      }
+      .offer-container .offer-box .offer-card-2 .offer-text p{
+          font-size:13px; 
+          position: relative;
+          bottom:20px;
+  
+      }
+      .offer-container .offer-box .offer-card-2 .offer-text h2{
+          font-size:30px;
+          display: flex;
+          position: relative;
+          margin-top:12rem;
+  
+      }
+      .offer-container .offer-box .offer-card-2 .offer-text .offer_btn{
+          position: relative;
+          top:-20px;
+          font-size: 10px;
+      }
+      .ourteam-container{
+        width:100%;
+      }
+      .ourteam-container .title{
+        margin-left: -15rem;
+        width: 100%;
+      }
+      .ourteam-container .ourteam-box1{
+        display:block;
+        width:90%;
+       
+      }
+      .ourteam-container .ourteam-box1 .image{
+        width:38rem;
+        margin-left: -4rem;
+      }
+      .ourteam-container .ourteam-box1 .info{
+        width:350px;
+        font-size:15px;
+        margin-left: -2rem;
+      }
+      .ourteam-container .ourteam-box1 .info h1{
+        width:0;
+      }
+      .ourteam-container .ourteam-box1 .info .job{
+        width:0;
+      }
+      .ourteam-container .ourteam-box2{
+        display:block;
+        width:0%;
+       
+      }
+      .ourteam-container .ourteam-box2 .image{
+        width:38rem;
+        margin-left: -24rem;
+      }
+      .ourteam-container .ourteam-box2 .info{
+        width:350px;
+        font-size:15px;
+        margin-left: -21rem;
+      }
+      .ourteam-container .ourteam-box2 .info h1{
+        width:0;
+      }
+      .ourteam-container .ourteam-box2 .info .job{
+        width:0;
+      }
+      .ourteam-container .ourteam-box3{
+        display:block;
+        width:90%;
+        margin-top:40px;
+        
+       
+      }
+      .ourteam-container .ourteam-box3 .image{
+        width:38rem;
+        margin-left: -4rem;
+      }
+      .ourteam-container .ourteam-box3 .info{
+        width:350px;
+        font-size:15px;
+        margin-left: -2rem;
+      }
+      .ourteam-container .ourteam-box3 .info h1{
+        width:0;
+      }
+      .ourteam-container .ourteam-box3 .info .job{
+        width:0;
+      }
+      .ourteam-container .ourteam-box4{
+        display:block;
+        width:0%;
+       
+      }
+      .ourteam-container .ourteam-box4 .image{
+        width:38rem;
+        margin-left: -24rem;
+      }
+      .ourteam-container .ourteam-box4 .info{
+        width:350px;
+        font-size:15px;
+        margin-left: -21rem;
+      }
+      .ourteam-container .ourteam-box4 .info h1{
+        width:0;
+      }
+      .ourteam-container .ourteam-box4 .info .job{
+        width:0;
+      }
+      .order .order-container{
+        width: 74%;
+        display: grid;
+      }
+      .order h1{
+        width: 10%;
+        position: relative;
+        left: -15rem;
+      }
+      .order h1 span{
+        width: 100%;
+      }
+      .order{
+        width: 100%;
+      }
+      .order .order-container{
+        width: 90%;
+      }
+      .order .order-container .order-image{
+        width:85%;
+      }
+      .order .order-container .order-image img{
+        width:90%;
+      }
+      .order .order-container .order-reg{
+        width: 94%;
+      }
+      .about_container{
+        width:100%;
+       
+      }
+      .about_container .about_main{
+        width:100%;
+        display: grid;
+      }
+      .about_container .about_main .about_image img{
+        width:90%;
+        position: relative;
+        top:65px;
+      }
+      .about_container .about_main .about_text{
+        width:60%;
+        margin-left: 70px;
+      }
+      .about_container .about_main .about_text .about_btn{
+        position: relative;
+        left: 20rem;
+        top: -2rem;
+      }
+      .banner-bg{
+        width: 100%;
+      }
+      .banner-bg h1{
+        margin-left:-40rem;
+      }
+      .menu{
+        width:90%;
+        position: relative;
+        right:30px;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+      }
+       section .ourmenubig-box{
+        width:90%;
+        position: relative;
+        right: 30px;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+      }
+      .drinks-products{
+        width: 100%;
+      }
+      .drinks-products .drinks-box{
+        width:70%;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+      }
+      .drinks-products2 .drinks-box{
+        width:70%;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+      }
+      .login_container{
+        width: 100%;
+      }
+      .register_container{
+        width: 100%;
+      }
+      
+      footer{
+        width:100%;
+        background: #eeee;
+      }
+      footer .footer-main{
+        width:100%;
+      }
+ 
+}
